@@ -16,26 +16,22 @@ curl -s "https://adventofcode.com/2022/day/${day}/input" --cookie "session=${ses
 
 
 echo -n "package main
+
 import (
-	\"bufio\"
-	\"fmt\"
-	\"os\"
+	"bufio"
+	"fmt"
+	"os"
 )
 
-func readFile(fileName string) {
-    fp, err := os.Open(fileName)
-    if err != nil {
-        panic(err)
-    }
-    defer fp.Close()
-
-    scanner := bufio.NewScanner(fp)
-    for scanner.Scan() {
-        fmt.Println(scanner.Text())
-    }
-}
-
-
 func main() {
-    readFile(\"input.txt\")
-}" > solve.go
+	fp, err := os.Open(\"input.txt\")
+	if err != nil {
+		panic(err)
+	}
+	defer fp.Close()
+
+	scanner := bufio.NewScanner(fp)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
+	}
+}" > main.go
