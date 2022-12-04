@@ -18,9 +18,9 @@ curl -s "https://adventofcode.com/2022/day/${day}/input" --cookie "session=${ses
 echo -n "package main
 
 import (
-	"bufio"
-	"fmt"
-	"os"
+	\"bufio\"
+	\"fmt\"
+	\"os\"
 )
 
 func main() {
