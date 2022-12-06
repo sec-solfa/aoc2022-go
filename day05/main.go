@@ -54,6 +54,7 @@ func part2(scanner *bufio.Scanner, stack [][]string) {
 			tmp = append(tmp, stack[src-1][len(stack[src-1])-1])
 			stack[src-1] = stack[src-1][:len(stack[src-1])-1]
 		}
+		// reverse tmp slice
 		for i, j := 0, len(tmp)-1; i < j; i, j = i+1, j-1 {
 			tmp[i], tmp[j] = tmp[j], tmp[i]
 		}
